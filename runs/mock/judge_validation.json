@@ -1,0 +1,236 @@
+{
+ "n_pairs": 16,
+ "n_scores": 32,
+ "mae": 0.375,
+ "within_1": 0.96875,
+ "spearman": 0.9742341800773614,
+ "preference_agreement": 1.0,
+ "preference_kappa": 1.0,
+ "routing_label_agreement": 1.0,
+ "items": [
+  {
+   "id": "jv-01",
+   "prompt_id": "open-040",
+   "human": [
+    10,
+    2
+   ],
+   "judge": [
+    10,
+    3
+   ],
+   "shown_swapped": true,
+   "note": "classic intuitive trap; response 2 is wrong"
+  },
+  {
+   "id": "jv-02",
+   "prompt_id": "open-007",
+   "human": [
+    9,
+    5
+   ],
+   "judge": [
+    9,
+    4
+   ],
+   "shown_swapped": true,
+   "note": "response 1 is exactly 50 words; response 2 is accurate but ~95 words, ignoring the constraint"
+  },
+  {
+   "id": "jv-03",
+   "prompt_id": "open-030",
+   "human": [
+    3,
+    10
+   ],
+   "judge": [
+    2,
+    10
+   ],
+   "shown_swapped": true,
+   "note": "response 1 understands the shared default but misses that both references print the same object"
+  },
+  {
+   "id": "jv-04",
+   "prompt_id": "open-015",
+   "human": [
+    10,
+    7
+   ],
+   "judge": [
+    10,
+    7
+   ],
+   "shown_swapped": false,
+   "note": "response 2 is right in spirit but omits the century rule and treats 365.25 as exact"
+  },
+  {
+   "id": "jv-05",
+   "prompt_id": "open-047",
+   "human": [
+    10,
+    1
+   ],
+   "judge": [
+    10,
+    1
+   ],
+   "shown_swapped": false,
+   "note": "base-rate neglect in response 2"
+  },
+  {
+   "id": "jv-06",
+   "prompt_id": "open-010",
+   "human": [
+    5,
+    9
+   ],
+   "judge": [
+    5,
+    10
+   ],
+   "shown_swapped": true,
+   "note": "response 1 scans 5-8-6, breaking the requested form; response 2 is 5-7-5"
+  },
+  {
+   "id": "jv-07",
+   "prompt_id": "open-026",
+   "human": [
+    4,
+    9
+   ],
+   "judge": [
+    3,
+    8
+   ],
+   "shown_swapped": true,
+   "note": "response 1 ignores both stated requirements"
+  },
+  {
+   "id": "jv-08",
+   "prompt_id": "open-013",
+   "human": [
+    9,
+    9
+   ],
+   "judge": [
+    8,
+    8
+   ],
+   "shown_swapped": true,
+   "note": "both correct and clear; tests that the judge can call a tie"
+  },
+  {
+   "id": "jv-09",
+   "prompt_id": "open-044",
+   "human": [
+    2,
+    10
+   ],
+   "judge": [
+    2,
+    10
+   ],
+   "shown_swapped": false,
+   "note": "response 1 falls for the naive answer and does not explain anything"
+  },
+  {
+   "id": "jv-10",
+   "prompt_id": "open-063",
+   "human": [
+    10,
+    4
+   ],
+   "judge": [
+    10,
+    6
+   ],
+   "shown_swapped": false,
+   "note": "response 2 confuses low-carbon with renewable"
+  },
+  {
+   "id": "jv-11",
+   "prompt_id": "open-005",
+   "human": [
+    3,
+    10
+   ],
+   "judge": [
+    2,
+    10
+   ],
+   "shown_swapped": true,
+   "note": "response 1 is curt and does not leave the door open"
+  },
+  {
+   "id": "jv-12",
+   "prompt_id": "open-079",
+   "human": [
+    10,
+    4
+   ],
+   "judge": [
+    10,
+    3
+   ],
+   "shown_swapped": true,
+   "note": "response 2 is informal (tu, on), violating the register constraint"
+  },
+  {
+   "id": "jv-13",
+   "prompt_id": "open-054",
+   "human": [
+    3,
+    10
+   ],
+   "judge": [
+    3,
+    10
+   ],
+   "shown_swapped": true,
+   "note": "response 1 makes a false claim about the math"
+  },
+  {
+   "id": "jv-14",
+   "prompt_id": "open-017",
+   "human": [
+    10,
+    5
+   ],
+   "judge": [
+    10,
+    5
+   ],
+   "shown_swapped": true,
+   "note": "response 2 covers one of the two requested strategies"
+  },
+  {
+   "id": "jv-15",
+   "prompt_id": "open-045",
+   "human": [
+    1,
+    10
+   ],
+   "judge": [
+    1,
+    10
+   ],
+   "shown_swapped": false,
+   "note": "response 1 is wrong"
+  },
+  {
+   "id": "jv-16",
+   "prompt_id": "open-069",
+   "human": [
+    10,
+    2
+   ],
+   "judge": [
+    10,
+    2
+   ],
+   "shown_swapped": true,
+   "note": "response 2 swaps two pairs"
+  }
+ ]
+}
