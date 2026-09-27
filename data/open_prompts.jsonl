@@ -1,0 +1,80 @@
+{"id": "open-001", "category": "writing", "difficulty": 1, "prompt": "Rewrite this sentence to sound more professional: \"hey, can u send me the report by tmrw? thx\""}
+{"id": "open-002", "category": "writing", "difficulty": 1, "prompt": "Write a two-sentence out-of-office reply for someone on vacation until Monday, June 9."}
+{"id": "open-003", "category": "writing", "difficulty": 1, "prompt": "Suggest five names for a neighborhood bakery that specializes in sourdough."}
+{"id": "open-004", "category": "writing", "difficulty": 1, "prompt": "Turn this into a friendly reminder for a team Slack channel: the kitchen fridge gets cleaned out every Friday at 4pm."}
+{"id": "open-005", "category": "writing", "difficulty": 2, "prompt": "Write a polite email declining a job offer while leaving the door open for future opportunities. Keep it under 120 words."}
+{"id": "open-006", "category": "writing", "difficulty": 2, "prompt": "Write a product description for a stainless steel water bottle that keeps drinks cold for 24 hours. Exactly three sentences, no exclamation marks."}
+{"id": "open-007", "category": "writing", "difficulty": 2, "prompt": "Summarize the plot of Romeo and Juliet in exactly 50 words."}
+{"id": "open-008", "category": "writing", "difficulty": 3, "prompt": "Write a 14-line sonnet about debugging code at 3am. Follow the Shakespearean rhyme scheme ABAB CDCD EFEF GG."}
+{"id": "open-009", "category": "writing", "difficulty": 3, "prompt": "Write a paragraph describing a sunrise without using the letter 'e'."}
+{"id": "open-010", "category": "writing", "difficulty": 2, "prompt": "Write a haiku about a train station in winter. Use the 5-7-5 syllable structure."}
+{"id": "open-011", "category": "writing", "difficulty": 3, "prompt": "Write a short story (under 150 words) where every sentence begins with the next letter of the alphabet, starting from A."}
+{"id": "open-012", "category": "writing", "difficulty": 2, "prompt": "Rewrite the following for a 10-year-old reader: \"Photosynthesis is the process by which chlorophyll-containing organisms convert light energy into chemical energy stored in glucose.\""}
+{"id": "open-013", "category": "explain", "difficulty": 1, "prompt": "What is the difference between weather and climate?"}
+{"id": "open-014", "category": "explain", "difficulty": 1, "prompt": "Explain what a URL is to someone who has never used the internet."}
+{"id": "open-015", "category": "explain", "difficulty": 1, "prompt": "Why do we have leap years?"}
+{"id": "open-016", "category": "explain", "difficulty": 2, "prompt": "Explain the difference between a stock and a bond, and when an investor might prefer each."}
+{"id": "open-017", "category": "explain", "difficulty": 2, "prompt": "Explain how a hash table handles collisions. Describe two strategies."}
+{"id": "open-018", "category": "explain", "difficulty": 2, "prompt": "Why does ice float on water? Explain in terms of molecular structure."}
+{"id": "open-019", "category": "explain", "difficulty": 3, "prompt": "Explain why the Monty Hall problem's answer is to switch doors, and address the most common objection that it should be 50/50."}
+{"id": "open-020", "category": "explain", "difficulty": 3, "prompt": "Explain the CAP theorem and give a concrete example of a system that chooses availability over consistency, including what anomaly a user might observe."}
+{"id": "open-021", "category": "explain", "difficulty": 3, "prompt": "Explain how transformers use positional information, and compare absolute sinusoidal encodings with rotary position embeddings (RoPE)."}
+{"id": "open-022", "category": "explain", "difficulty": 2, "prompt": "What causes inflation? Describe demand-pull and cost-push inflation with one example each."}
+{"id": "open-023", "category": "explain", "difficulty": 3, "prompt": "Explain the difference between p-values and Bayesian posterior probabilities, and why a p-value of 0.03 does not mean there is a 97% chance the hypothesis is true."}
+{"id": "open-024", "category": "explain", "difficulty": 2, "prompt": "How do vaccines train the immune system? Mention memory B cells."}
+{"id": "open-025", "category": "explain", "difficulty": 3, "prompt": "Explain why training a neural network with a learning rate that is too high can cause the loss to diverge, using the geometry of a quadratic loss surface."}
+{"id": "open-026", "category": "code", "difficulty": 1, "prompt": "Write a Python function that returns True if a string is a palindrome, ignoring case and spaces."}
+{"id": "open-027", "category": "code", "difficulty": 1, "prompt": "Write a SQL query that returns the ten most recent orders from a table called orders with columns id, customer_id, created_at, and total."}
+{"id": "open-028", "category": "code", "difficulty": 2, "prompt": "Write a Python function that merges two sorted lists into one sorted list in O(n) time without using sort()."}
+{"id": "open-029", "category": "code", "difficulty": 2, "prompt": "Write a JavaScript debounce function and explain in one sentence when you would use it."}
+{"id": "open-030", "category": "code", "difficulty": 2, "prompt": "What does this Python print, and why?\n\ndef f(x=[]):\n    x.append(1)\n    return x\n\nprint(f(), f())"}
+{"id": "open-031", "category": "code", "difficulty": 3, "prompt": "Implement an LRU cache in Python with O(1) get and put, without using functools or OrderedDict."}
+{"id": "open-032", "category": "code", "difficulty": 3, "prompt": "Write a Python function that returns the length of the longest substring without repeating characters, and state its time complexity."}
+{"id": "open-033", "category": "code", "difficulty": 3, "prompt": "Find the bug in this binary search and fix it:\n\ndef search(a, t):\n    lo, hi = 0, len(a)\n    while lo < hi:\n        mid = (lo + hi) // 2\n        if a[mid] < t:\n            lo = mid\n        else:\n            hi = mid\n    return lo"}
+{"id": "open-034", "category": "code", "difficulty": 3, "prompt": "Write a regular expression that matches valid IPv4 addresses (each octet 0-255, no leading zeros) and explain each part."}
+{"id": "open-035", "category": "code", "difficulty": 2, "prompt": "Explain the difference between git merge and git rebase, and when rebasing a shared branch causes problems."}
+{"id": "open-036", "category": "code", "difficulty": 3, "prompt": "Write a Python generator that yields all prime numbers indefinitely using an incremental sieve, not trial division."}
+{"id": "open-037", "category": "code", "difficulty": 2, "prompt": "Convert this Python loop into a list comprehension: result = []\nfor n in nums:\n    if n % 2 == 0:\n        result.append(n * n)"}
+{"id": "open-038", "category": "code", "difficulty": 3, "prompt": "Design a rate limiter for an API that allows 100 requests per user per minute. Compare fixed window and sliding window log approaches, and write the sliding window version in Python."}
+{"id": "open-039", "category": "reasoning", "difficulty": 1, "prompt": "If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies? Explain."}
+{"id": "open-040", "category": "reasoning", "difficulty": 2, "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? Show your reasoning."}
+{"id": "open-041", "category": "reasoning", "difficulty": 2, "prompt": "I have two coins that add up to 30 cents, and one of them is not a nickel. What are the two coins?"}
+{"id": "open-042", "category": "reasoning", "difficulty": 3, "prompt": "Three friends split a hotel bill of $30, paying $10 each. The clerk realizes the room was $25 and gives $5 to the bellhop to return. The bellhop keeps $2 and gives each friend $1 back. Now each paid $9, totaling $27, plus the bellhop's $2 is $29. Where is the missing dollar? Explain the error."}
+{"id": "open-043", "category": "reasoning", "difficulty": 3, "prompt": "You have 12 balls, one of which is heavier or lighter than the rest. Using a balance scale exactly three times, describe a strategy to find the odd ball and whether it is heavier or lighter."}
+{"id": "open-044", "category": "reasoning", "difficulty": 3, "prompt": "A snail climbs 3 feet up a 20-foot well each day and slips back 2 feet each night. On which day does it reach the top? Explain why the naive answer is wrong."}
+{"id": "open-045", "category": "reasoning", "difficulty": 2, "prompt": "If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?"}
+{"id": "open-046", "category": "reasoning", "difficulty": 3, "prompt": "In a village, the barber shaves everyone who does not shave themselves, and only them. Who shaves the barber? Explain what this paradox shows."}
+{"id": "open-047", "category": "reasoning", "difficulty": 3, "prompt": "A test for a disease is 99% sensitive and 95% specific. The disease affects 1 in 1,000 people. If someone tests positive, what is the probability they have the disease? Show the calculation."}
+{"id": "open-048", "category": "reasoning", "difficulty": 2, "prompt": "Sort these by how long they took to happen, shortest first: a human heartbeat, a solar eclipse's totality, a lunar orbit, a blink."}
+{"id": "open-049", "category": "reasoning", "difficulty": 3, "prompt": "Alice says Bob is lying. Bob says Carol is lying. Carol says both Alice and Bob are lying. Who is telling the truth? Show the case analysis."}
+{"id": "open-050", "category": "reasoning", "difficulty": 3, "prompt": "What is the expected number of rolls of a fair six-sided die needed to see all six faces at least once? Derive it."}
+{"id": "open-051", "category": "planning", "difficulty": 1, "prompt": "Give me a simple packing list for a weekend camping trip."}
+{"id": "open-052", "category": "planning", "difficulty": 1, "prompt": "Suggest a 3-day beginner workout plan that needs no equipment."}
+{"id": "open-053", "category": "planning", "difficulty": 2, "prompt": "Plan a one-day itinerary in Kyoto for someone who likes temples and food, with rough times."}
+{"id": "open-054", "category": "planning", "difficulty": 2, "prompt": "I have $500 a month to put toward $8,000 of credit card debt at 22% APR and a $3,000 car loan at 5%. Which should I pay first, and why?"}
+{"id": "open-055", "category": "planning", "difficulty": 3, "prompt": "Outline a migration plan for moving a monolithic Rails app to services without downtime. Include how to handle the shared database."}
+{"id": "open-056", "category": "planning", "difficulty": 2, "prompt": "Create a study plan for learning basic Spanish in 8 weeks with 30 minutes a day."}
+{"id": "open-057", "category": "planning", "difficulty": 3, "prompt": "Design an A/B test to check whether a new checkout button increases conversion. Specify the metric, how to compute the sample size, and two pitfalls."}
+{"id": "open-058", "category": "planning", "difficulty": 2, "prompt": "What questions should I ask a landlord before signing a lease? Give eight."}
+{"id": "open-059", "category": "analysis", "difficulty": 2, "prompt": "Compare electric cars and hybrid cars for someone who drives 80 miles a day and lives in an apartment."}
+{"id": "open-060", "category": "analysis", "difficulty": 2, "prompt": "What are the pros and cons of a four-day work week for employers?"}
+{"id": "open-061", "category": "analysis", "difficulty": 3, "prompt": "A startup's monthly revenue grew from $10k to $40k over 12 months. What was the compound monthly growth rate? Then explain why this metric alone is a poor measure of business health."}
+{"id": "open-062", "category": "analysis", "difficulty": 3, "prompt": "Critique this argument: \"Countries with more ice cream sales have higher drowning rates, so ice cream causes drowning.\" Name the fallacy and propose a study design that would test causation."}
+{"id": "open-063", "category": "analysis", "difficulty": 2, "prompt": "Classify each as a renewable or non-renewable energy source: coal, wind, uranium, geothermal, natural gas, biomass."}
+{"id": "open-064", "category": "analysis", "difficulty": 3, "prompt": "A model has 95% accuracy on a dataset where 95% of examples are negative. Is it a good model? Explain which metrics you would look at instead and why."}
+{"id": "open-065", "category": "analysis", "difficulty": 2, "prompt": "Extract every date and the event on it from this text as a list: \"The contract was signed on March 3, 2021. Delivery happened on April 15, 2021, two weeks late. The dispute was filed on 9 June 2021 and settled on January 20, 2022.\""}
+{"id": "open-066", "category": "analysis", "difficulty": 3, "prompt": "Here is a table of monthly users: Jan 1200, Feb 1350, Mar 1300, Apr 1600, May 1750, Jun 1700. Compute the month-over-month growth for each month, identify the trend, and flag anything unusual."}
+{"id": "open-067", "category": "analysis", "difficulty": 1, "prompt": "Is the sentiment of this review positive, negative, or mixed? \"The food was amazing but we waited an hour for a table.\""}
+{"id": "open-068", "category": "analysis", "difficulty": 3, "prompt": "Estimate how many piano tuners work in Chicago. Show a Fermi estimate with each assumption stated."}
+{"id": "open-069", "category": "knowledge", "difficulty": 1, "prompt": "Name the planets of the solar system in order from the Sun."}
+{"id": "open-070", "category": "knowledge", "difficulty": 1, "prompt": "What are three common symptoms of dehydration?"}
+{"id": "open-071", "category": "knowledge", "difficulty": 2, "prompt": "Briefly describe the causes of World War I, including the alliance system."}
+{"id": "open-072", "category": "knowledge", "difficulty": 2, "prompt": "What is the difference between mitosis and meiosis? Give the number of daughter cells and their ploidy for each."}
+{"id": "open-073", "category": "knowledge", "difficulty": 3, "prompt": "Explain what Gödel's first incompleteness theorem says and what it does not say, avoiding common misreadings."}
+{"id": "open-074", "category": "knowledge", "difficulty": 2, "prompt": "Explain the difference between an LLC and a sole proprietorship in the United States."}
+{"id": "open-075", "category": "knowledge", "difficulty": 3, "prompt": "Describe how the Krebs cycle connects to oxidative phosphorylation, naming the electron carriers involved."}
+{"id": "open-076", "category": "knowledge", "difficulty": 2, "prompt": "Who was Ada Lovelace and why is she associated with computing?"}
+{"id": "open-077", "category": "knowledge", "difficulty": 3, "prompt": "Explain the difference between TCP congestion control algorithms Reno and CUBIC, and why CUBIC performs better on high-bandwidth long-delay links."}
+{"id": "open-078", "category": "knowledge", "difficulty": 1, "prompt": "What does a thermostat do?"}
+{"id": "open-079", "category": "knowledge", "difficulty": 3, "prompt": "Translate into French, keeping the formal register: \"We regret to inform you that your application has not been successful on this occasion, but we encourage you to apply again next year.\""}
+{"id": "open-080", "category": "knowledge", "difficulty": 2, "prompt": "What is the difference between a virus and a bacterium, and why don't antibiotics work on viruses?"}
