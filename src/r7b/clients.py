@@ -55,6 +55,7 @@ class LiveBackend:
 
     def __init__(self, key: str, ledger: Ledger, max_retries: int = 5):
         import cohere
+        import cohere.errors
 
         self._errors = cohere.errors
         self.co = cohere.ClientV2(api_key=key, timeout=120)
