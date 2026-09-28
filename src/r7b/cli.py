@@ -52,6 +52,54 @@ def cmd_budget(args) -> None:
         sys.exit("plan does not fit the monthly budget; shrink SAMPLE_SIZES in r7b/data.py")
 
 
+def _short_error(e: Exception) -> str:
+    status = getattr(e, "status_code", None)
+    body = getattr(e, "body", None)
+    message = body.get("message") if isinstance(body, dict) else body
+    return f"HTTP {status}: {message}" if status else f"{type(e).__name__}: {e}"
+
+
+def cmd_check(args) -> None:
+    """Spend 3 calls to prove the key and model names work before a full live run.
+
+    The two chat calls are the exact requests the full run makes for the first query,
+    so they are served from cache later; only the single embed call is extra.
+    """
+    from r7b.budget import BudgetExceeded
+    from r7b.clients import make_client
+    from r7b.collect import MODELS
+    from r7b.config import EMBED_MODEL
+    from r7b.prompts import max_tokens, user_message
+
+    if not api_key():
+        sys.exit("no COHERE_API_KEY found; copy .env.example to .env and set it")
+    queries, _ = _plan()
+    q = queries[0]
+    client = make_client("live")
+    ok = True
+    for role, model in MODELS.items():
+        try:
+            r = client.chat(model, user_message(q), max_tokens(q))
+            print(f"ok   {role:6} {model}: {r.input_tokens} in / {r.output_tokens} out tokens")
+        except BudgetExceeded as e:
+            sys.exit(str(e))
+        except Exception as e:
+            ok = False
+            print(f"FAIL {role:6} {model}: {_short_error(e)}")
+    try:
+        vectors, _ = client.embed([q.text])
+        print(f"ok   embed  {EMBED_MODEL}: {len(vectors[0])} dims")
+    except Exception as e:
+        ok = False
+        print(f"FAIL embed  {EMBED_MODEL}: {_short_error(e)}")
+    used = Ledger(cache_dir("live") / "ledger.jsonl", budget_from_env()).used_this_month()
+    print(f"live calls used this month: {used}")
+    if not ok:
+        sys.exit("fix the failures above (model names live in src/r7b/config.py) before "
+                 "`r7b run --live`")
+    print("all good: run `uv run r7b run --live`")
+
+
 def cmd_run(args) -> None:
     import numpy as np
 
@@ -112,6 +160,7 @@ def main(argv: list[str] | None = None) -> None:
 
     sub.add_parser("data", help="rebuild data/queries.jsonl from the source datasets")
     sub.add_parser("budget", help="show the API call plan against the monthly cap")
+    sub.add_parser("check", help="3 live calls to verify the key and model names")
     run = sub.add_parser("run", help="collect, judge, embed, train, evaluate, export")
     group = run.add_mutually_exclusive_group()
     group.add_argument("--mock", action="store_true", help="deterministic offline mode")
@@ -119,7 +168,8 @@ def main(argv: list[str] | None = None) -> None:
     run.add_argument("--workers", type=int, default=4)
 
     args = parser.parse_args(argv)
-    {"data": cmd_data, "budget": cmd_budget, "run": cmd_run}[args.command](args)
+    {"data": cmd_data, "budget": cmd_budget, "check": cmd_check, "run": cmd_run}[
+        args.command](args)
 
 
 if __name__ == "__main__":

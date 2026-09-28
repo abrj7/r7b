@@ -158,10 +158,13 @@ npm run build              # static export to site/dist
 ```bash
 cp .env.example .env       # then set COHERE_API_KEY=...
 uv run r7b budget          # confirm the plan fits what's left this month
+uv run r7b check           # 3 calls: proves the key and all three model names work
 uv run r7b run --live      # ~860 calls; resumable, everything is cached
 ```
 
-At 20 requests/minute per model with two models in parallel, the answer pass takes roughly 20 minutes and judging another 5. If it's interrupted, re-run the same command: cached calls are free and the ledger picks up where it left off. The run writes `runs/live/` and re-exports `site/public/data/`, and the site's mock banner disappears on its own.
+`r7b check` exists so a bad key or a retired model name costs 3 calls instead of a failed run. Its two chat calls are the same requests the full run makes first, so they're reused from cache.
+
+At 20 requests/minute per model with two models in parallel, the answer pass takes roughly 20 minutes and judging another 5. If it's interrupted, re-run the same command: cached calls are free and the ledger picks up where it left off. The run writes `runs/live/` and re-exports `site/public/data/`, and the site's mock banner disappears on its own. Commit `runs/live/`, `site/public/data/` and `cache/live/` (the cached responses, so nobody has to spend the calls again) and push to `main` to redeploy.
 
 After the first live run, read `runs/live/judge_validation.json` before trusting the open-ended labels. If the judge's label agreement with the hand scores is poor, the open-ended half of the results isn't meaningful.
 
